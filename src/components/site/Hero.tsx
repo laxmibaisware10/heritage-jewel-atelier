@@ -15,15 +15,20 @@ export function Hero() {
       <motion.img
         src={heroImg}
         alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
-        className="absolute inset-0 h-[115%] w-full object-cover object-center"
+        className="absolute inset-0 h-[115%] w-full object-cover object-right"
         style={{ transform: `translate3d(0, ${y * 0.25}px, 0)` }}
         initial={{ scale: 1.08, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/10 to-charcoal/70" />
+      {/* Top scrim for header legibility */}
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-charcoal/70 to-transparent" />
+      {/* Left scrim for headline legibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/30 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-charcoal/70 to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-[1440px] h-full px-6 lg:px-12 flex flex-col justify-end pb-24 md:pb-32">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
