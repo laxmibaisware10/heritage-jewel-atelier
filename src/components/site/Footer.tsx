@@ -52,9 +52,6 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12">
         <div className="col-span-2 lg:col-span-3">
           <div className="font-display text-2xl tracking-[0.18em] uppercase">Shri Ram</div>
-          <div className="text-[10px] tracking-[0.4em] uppercase text-champagne mt-1">
-            Jewellers · Since 1952
-          </div>
           <p className="mt-8 text-sm text-ivory/65 leading-relaxed max-w-xs">
             A four-generation Indian Maison crafting fine jewellery for life's
             most precious moments.

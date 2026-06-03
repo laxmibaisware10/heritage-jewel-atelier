@@ -15,7 +15,7 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shri Ram Jewellers — Timeless Indian Luxury Jewellery Since 1952" },
+      { title: "Shri Ram Jewellers — Timeless Indian Luxury Jewellery" },
       {
         name: "description",
         content:

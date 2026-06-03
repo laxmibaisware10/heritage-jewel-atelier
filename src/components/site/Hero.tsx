@@ -35,10 +35,6 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl text-ivory"
         >
-          <div className="flex items-center gap-3 mb-8">
-            <span className="rule bg-champagne" />
-            <span className="eyebrow text-champagne">Since 1952 · Crafted in India</span>
-          </div>
           <h1 className="font-display text-[44px] leading-[1.05] md:text-[72px] lg:text-[88px] tracking-[-0.01em] text-ivory">
             Timeless Jewellery<br />
             <em className="not-italic text-champagne font-light">Crafted For Generations</em>
