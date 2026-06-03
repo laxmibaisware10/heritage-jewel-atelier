@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Search, Heart, CalendarDays, Menu, X } from "lucide-react";
-import logoAsset from "@/assets/srj-logo.png.asset.json";
+import { CalendarDays, Menu, X } from "lucide-react";
+import logoAsset from "@/assets/srj-logo-v2.png.asset.json";
 
 const nav = [
   { label: "Collections", href: "/#collections" },
@@ -16,35 +16,39 @@ export function Header() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#F8F5F0] border-b border-black/[0.08]">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-10 h-[100px] flex items-center justify-between gap-8">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-10 h-[110px] flex items-center justify-between gap-10">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-4 shrink-0">
+        <Link to="/" className="flex items-center gap-5 shrink-0">
           <img
             src={logoAsset.url}
             alt="Shri Ram Jewellers emblem"
-            className="h-[68px] w-[68px] object-contain"
+            width={70}
+            height={70}
+            className="h-[70px] w-[70px] object-contain"
           />
           <div className="flex flex-col leading-none">
-            <span className="font-['Playfair_Display'] text-[36px] lg:text-[44px] font-semibold text-[#7A1F1F] leading-[0.95]">
+            <span
+              className="font-['Playfair_Display'] text-[34px] md:text-[42px] lg:text-[52px] font-semibold text-[#7A1F1F] leading-[0.95]"
+            >
               SHRI RAM
             </span>
-            <span className="flex items-center gap-2 mt-1.5">
-              <span className="h-px w-6 bg-[#B38B4D]" />
-              <span className="text-[13px] lg:text-[15px] tracking-[0.35em] font-medium text-[#B38B4D] uppercase">
+            <span className="flex items-center gap-3 mt-2">
+              <span className="h-px w-8 bg-[#C8A165]" />
+              <span className="text-[14px] md:text-[16px] lg:text-[18px] tracking-[0.35em] font-medium text-[#C8A165] uppercase">
                 Jewellers
               </span>
-              <span className="h-px w-6 bg-[#B38B4D]" />
+              <span className="h-px w-8 bg-[#C8A165]" />
             </span>
           </div>
         </Link>
 
         {/* Nav */}
-        <nav className="hidden xl:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-7">
           {nav.map((n) => (
             <a
               key={n.label}
               href={n.href}
-              className="group relative text-[13px] tracking-[0.12em] uppercase text-[#2B2B2B] font-medium hover:text-[#B38B4D] transition-colors duration-300"
+              className="group relative text-[12.5px] tracking-[0.14em] uppercase text-[#2B2B2B] font-medium hover:text-[#B38B4D] transition-colors duration-300"
             >
               {n.label}
               <span className="absolute left-0 -bottom-1.5 h-px w-0 bg-[#B38B4D] transition-all duration-300 group-hover:w-full" />
@@ -52,18 +56,12 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Right */}
-        <div className="hidden lg:flex items-center gap-6 shrink-0">
-          <button aria-label="Search" className="text-[#2B2B2B] hover:text-[#B38B4D] transition-colors">
-            <Search className="h-[19px] w-[19px] stroke-[1.4]" />
-          </button>
-          <button aria-label="Wishlist" className="text-[#2B2B2B] hover:text-[#B38B4D] transition-colors">
-            <Heart className="h-[19px] w-[19px] stroke-[1.4]" />
-          </button>
+        {/* CTA */}
+        <div className="hidden lg:flex items-center shrink-0">
           <a
             href="#appointment"
             className="inline-flex items-center gap-2 bg-[#C89B57] hover:bg-[#A8813F] text-white rounded transition-colors duration-300"
-            style={{ height: 52, padding: "0 32px", fontWeight: 600, fontSize: 13, letterSpacing: "0.12em", textTransform: "uppercase" }}
+            style={{ height: 50, padding: "0 28px", fontWeight: 600, fontSize: 12.5, letterSpacing: "0.14em", textTransform: "uppercase" }}
           >
             <CalendarDays className="h-4 w-4 stroke-[1.6]" />
             Book Appointment
@@ -96,7 +94,7 @@ export function Header() {
             <a
               href="#appointment"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center gap-2 bg-[#C89B57] text-white rounded h-[52px] px-8 text-[13px] tracking-[0.12em] uppercase font-semibold"
+              className="mt-4 inline-flex items-center justify-center gap-2 bg-[#C89B57] text-white rounded h-[50px] px-8 text-[12.5px] tracking-[0.14em] uppercase font-semibold"
             >
               <CalendarDays className="h-4 w-4" />
               Book Appointment
