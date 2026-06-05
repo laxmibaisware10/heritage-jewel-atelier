@@ -94,7 +94,7 @@ export function Footer() {
             <li className="flex gap-3">
               <MapPin className="h-4 w-4 stroke-[1.4] mt-0.5 shrink-0 text-champagne" />
               <span>
-                12, Heritage Plaza, M.I. Road<br />Jaipur, Rajasthan 302001
+                Shardha Square, 1 A, Road<br />near Bank Of Maharashtra Road<br />Old Subhedar Layout, Ambika Nagar<br />Ayodhya Nagar, Nagpur<br />Maharashtra 440024
               </span>
             </li>
             <li className="flex gap-3">
