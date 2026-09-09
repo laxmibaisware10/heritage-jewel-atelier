@@ -11,9 +11,9 @@ const features = [
 
 export function Store() {
   return (
-    <section id="appointment" className="bg-beige py-24 md:py-40">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-        <div className="lg:col-span-6 lg:order-2">
+    <section id="appointment" className="bg-beige py-16 sm:py-24 lg:py-36">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-12 lg:grid-cols-12 lg:gap-20 lg:px-12">
+        <div className="md:order-2 md:col-span-1 lg:col-span-6">
           <Reveal>
             <div className="img-frame relative aspect-[5/4] bg-ivory">
               <img
@@ -26,7 +26,7 @@ export function Store() {
           </Reveal>
         </div>
 
-        <div className="lg:col-span-6 lg:order-1">
+        <div className="min-w-0 md:order-1 md:col-span-1 lg:col-span-6">
           <Reveal>
             <div className="flex items-center gap-3 mb-8">
               <span className="rule" />
@@ -34,7 +34,7 @@ export function Store() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-charcoal leading-[1.05]">
+            <h2 className="font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-6xl">
               An Invitation to<br />
               <em className="not-italic text-champagne font-light">Our Maison</em>
             </h2>
@@ -60,7 +60,7 @@ export function Store() {
           <Reveal delay={0.4}>
             <a
               href="#"
-              className="mt-12 inline-flex items-center gap-3 bg-charcoal text-ivory px-9 py-4 text-[11px] tracking-[0.28em] uppercase hover:bg-champagne transition-colors duration-500"
+              className="mt-9 inline-flex min-h-12 max-w-full items-center justify-center gap-3 bg-charcoal px-5 py-3 text-center text-[10px] uppercase tracking-[0.18em] text-ivory transition-colors duration-500 hover:bg-champagne sm:mt-12 sm:px-9 sm:py-4 sm:text-[11px] sm:tracking-[0.28em]"
             >
               Schedule a Private Appointment
             </a>

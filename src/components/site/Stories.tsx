@@ -23,9 +23,9 @@ const reviews = [
 
 export function Stories() {
   return (
-    <section className="bg-ivory py-24 md:py-40">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="text-center mb-20">
+    <section className="bg-ivory py-16 sm:py-24 lg:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
+        <div className="mb-12 text-center sm:mb-16 lg:mb-20">
           <Reveal>
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="rule" />
@@ -41,10 +41,10 @@ export function Stories() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {reviews.map((r, i) => (
             <Reveal key={r.name} delay={i * 0.08}>
-              <figure className="bg-beige p-10 md:p-12 h-full flex flex-col">
+              <figure className="flex h-full flex-col bg-beige p-7 sm:p-9 lg:p-12">
                 <div className="text-champagne text-sm tracking-[0.4em]">★ ★ ★ ★ ★</div>
                 <blockquote className="mt-8 font-display text-2xl md:text-[26px] leading-[1.4] text-charcoal flex-1">
                   &ldquo;{r.quote}&rdquo;

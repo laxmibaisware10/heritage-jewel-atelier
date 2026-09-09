@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="bg-charcoal text-ivory">
       {/* Newsletter */}
       <div className="border-b border-ivory/15">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-end gap-10 px-5 py-14 sm:px-6 sm:py-20 lg:grid-cols-12 lg:px-12">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-3 mb-6">
               <span className="rule bg-champagne" />
@@ -31,12 +31,12 @@ export function Footer() {
               <em className="not-italic text-champagne font-light">delivered quietly.</em>
             </h3>
           </div>
-          <form className="lg:col-span-6 flex flex-col sm:flex-row gap-0 border-b border-ivory/40 pb-3">
+          <form className="flex min-w-0 flex-col gap-2 border-b border-ivory/40 pb-3 sm:flex-row sm:gap-0 lg:col-span-6">
             <input
               type="email"
               required
               placeholder="your@email.com"
-              className="flex-1 bg-transparent text-ivory placeholder:text-ivory/40 py-4 outline-none text-sm tracking-wide"
+              className="min-w-0 flex-1 bg-transparent py-4 text-sm tracking-wide text-ivory outline-none placeholder:text-ivory/40"
             />
             <button
               type="submit"
@@ -49,8 +49,8 @@ export function Footer() {
       </div>
 
       {/* Main */}
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-12">
-        <div className="col-span-2 lg:col-span-3">
+       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-5 py-14 sm:grid-cols-2 sm:px-6 sm:py-20 md:grid-cols-4 lg:grid-cols-12 lg:px-12">
+        <div className="sm:col-span-2 lg:col-span-3">
           <div className="font-display text-2xl tracking-[0.18em] uppercase">Shri Ram</div>
           <p className="mt-8 text-sm text-ivory/65 leading-relaxed max-w-xs">
             A four-generation Indian Maison crafting fine jewellery for life's
@@ -86,7 +86,7 @@ export function Footer() {
           </div>
         ))}
 
-        <div className="col-span-2 lg:col-span-3">
+        <div className="sm:col-span-2 lg:col-span-3">
           <h4 className="text-[11px] tracking-[0.32em] uppercase text-champagne mb-6">
             Flagship Boutique
           </h4>
@@ -110,9 +110,9 @@ export function Footer() {
       </div>
 
       <div className="border-t border-ivory/15">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-3 text-[10px] tracking-[0.28em] uppercase text-ivory/50">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-4 px-5 py-6 text-center text-[9px] uppercase leading-relaxed tracking-[0.18em] text-ivory/50 sm:px-6 md:flex-row md:text-left md:text-[10px] md:tracking-[0.28em] lg:px-12">
           <div>© 1952 — 2026 Shri Ram Jewellers. All rights reserved.</div>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-5 sm:gap-8">
             <a href="#" className="hover:text-ivory">Privacy</a>
             <a href="#" className="hover:text-ivory">Terms</a>
             <a href="#" className="hover:text-ivory">Cookies</a>

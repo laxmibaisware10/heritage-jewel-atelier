@@ -11,49 +11,49 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[100svh] min-h-[720px] w-full overflow-hidden bg-charcoal">
+    <section className="relative h-[100svh] min-h-[620px] w-full overflow-hidden bg-charcoal sm:min-h-[700px] lg:min-h-[720px]">
       <motion.img
         src={heroImg}
         alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
-        className="absolute inset-0 h-[115%] w-full object-cover object-right"
+        className="absolute inset-0 h-[110%] w-full object-cover object-[68%_center] sm:h-[115%] sm:object-[72%_center] lg:object-right"
         style={{ transform: `translate3d(0, ${y * 0.25}px, 0)` }}
         initial={{ scale: 1.08, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
       />
       {/* Top scrim for header legibility */}
-      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-charcoal/70 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/70 to-transparent sm:h-48" />
       {/* Left scrim for headline legibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent md:bg-gradient-to-r md:from-charcoal/80 md:via-charcoal/30" />
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-charcoal/70 to-transparent" />
 
-      <div className="relative z-10 mx-auto max-w-[1440px] h-full px-6 lg:px-12 flex flex-col justify-end pb-24 md:pb-32">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-10 pt-24 sm:px-6 sm:pb-16 md:pb-24 lg:px-12 lg:pb-28">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl text-ivory"
+          className="max-w-[42rem] text-ivory"
         >
-          <h1 className="font-display text-[44px] leading-[1.05] md:text-[72px] lg:text-[88px] tracking-[-0.01em] text-ivory">
+          <h1 className="font-display text-[38px] leading-[1.04] text-ivory sm:text-[52px] md:text-[64px] lg:text-[76px] xl:text-[84px]">
             Timeless Jewellery<br />
             <em className="not-italic text-champagne font-light">Crafted For Generations</em>
           </h1>
-          <p className="mt-8 max-w-xl text-[15px] md:text-base leading-relaxed text-ivory/80 font-light">
+          <p className="mt-5 max-w-xl text-sm font-light leading-relaxed text-ivory/85 sm:mt-7 sm:text-base">
             Celebrating life's most precious moments with unmatched craftsmanship,
             heritage, and the quiet trust of seven decades.
           </p>
 
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-7 grid max-w-sm grid-cols-1 gap-3 sm:mt-10 sm:flex sm:max-w-none sm:flex-wrap sm:gap-4">
             <a
               href="#collections"
-              className="inline-flex items-center gap-3 bg-ivory text-charcoal px-8 py-4 text-[11px] tracking-[0.28em] uppercase hover:bg-champagne hover:text-ivory transition-colors duration-500"
+              className="inline-flex min-h-12 items-center justify-center gap-3 bg-ivory px-5 py-3 text-center text-[10px] uppercase tracking-[0.2em] text-charcoal transition-colors duration-500 hover:bg-champagne hover:text-ivory sm:px-8 sm:py-4 sm:text-[11px] sm:tracking-[0.28em]"
             >
               Explore Collections
             </a>
             <a
               href="#appointment"
-              className="inline-flex items-center gap-3 border border-ivory/70 text-ivory px-8 py-4 text-[11px] tracking-[0.28em] uppercase hover:bg-ivory hover:text-charcoal transition-colors duration-500"
+              className="inline-flex min-h-12 items-center justify-center gap-3 border border-ivory/70 px-5 py-3 text-center text-[10px] uppercase tracking-[0.2em] text-ivory transition-colors duration-500 hover:bg-ivory hover:text-charcoal sm:px-8 sm:py-4 sm:text-[11px] sm:tracking-[0.28em]"
             >
               Book Consultation
             </a>
