@@ -12,9 +12,9 @@ const items = [
 
 export function WhyChoose() {
   return (
-    <section className="bg-ivory py-24 md:py-36">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="text-center mb-20">
+    <section className="bg-ivory py-16 sm:py-24 lg:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
+        <div className="mb-12 text-center sm:mb-16 lg:mb-20">
           <Reveal>
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="rule" />
@@ -29,10 +29,10 @@ export function WhyChoose() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-border">
+        <div className="grid grid-cols-1 border-l border-t border-border sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <Reveal key={it.label} delay={i * 0.05}>
-              <div className="border-r border-b border-border p-10 md:p-12 h-full hover:bg-beige transition-colors duration-500 group">
+              <div className="group h-full border-b border-r border-border p-7 transition-colors duration-500 hover:bg-beige sm:p-9 lg:p-12">
                 <it.icon className="h-7 w-7 stroke-[1] text-champagne mb-8 transition-transform duration-700 group-hover:scale-110" />
                 <h3 className="font-display text-2xl text-charcoal">{it.label}</h3>
                 <p className="mt-4 text-sm text-charcoal/70 leading-relaxed">

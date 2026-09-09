@@ -14,9 +14,9 @@ const products = [
 
 export function Bestsellers() {
   return (
-    <section className="bg-ivory py-24 md:py-40">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 md:mb-20 gap-6">
+    <section className="bg-ivory py-16 sm:py-24 lg:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
+        <div className="mb-10 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between lg:mb-20">
           <Reveal>
             <div>
               <div className="flex items-center gap-3 mb-6">
@@ -33,7 +33,7 @@ export function Bestsellers() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+        <div className="grid grid-cols-1 gap-8 min-[430px]:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-10">
           {products.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.06}>
               <article className="group">
@@ -46,11 +46,11 @@ export function Bestsellers() {
                   />
                   <button
                     aria-label="Wishlist"
-                    className="absolute top-4 right-4 grid place-items-center h-10 w-10 bg-ivory/90 backdrop-blur text-charcoal opacity-0 group-hover:opacity-100 transition-opacity duration-500 hover:text-champagne"
+                    className="absolute right-3 top-3 grid h-10 w-10 place-items-center bg-ivory/90 text-charcoal transition-opacity duration-500 hover:text-champagne lg:opacity-0 lg:group-hover:opacity-100"
                   >
                     <Heart className="h-4 w-4 stroke-[1.4]" />
                   </button>
-                  <button className="absolute inset-x-4 bottom-4 inline-flex items-center justify-center gap-2 bg-charcoal/95 text-ivory py-3 text-[10px] tracking-[0.28em] uppercase opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-champagne">
+                  <button className="absolute inset-x-3 bottom-3 inline-flex items-center justify-center gap-2 bg-charcoal/95 py-3 text-[10px] uppercase tracking-[0.2em] text-ivory transition-all duration-500 hover:bg-champagne lg:translate-y-2 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                     <Eye className="h-3.5 w-3.5 stroke-[1.4]" />
                     Quick View
                   </button>

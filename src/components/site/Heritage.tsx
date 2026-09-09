@@ -3,9 +3,9 @@ import heritageImg from "@/assets/heritage-artisan.jpg";
 
 export function Heritage() {
   return (
-    <section id="heritage" className="bg-ivory py-24 md:py-40">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-        <Reveal className="lg:col-span-6">
+    <section id="heritage" className="bg-ivory py-16 sm:py-24 lg:py-36">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-12 lg:grid-cols-12 lg:gap-20 lg:px-12">
+        <Reveal className="md:col-span-1 lg:col-span-6">
           <div className="img-frame relative aspect-[4/5] bg-beige">
             <img
               src={heritageImg}
@@ -16,7 +16,7 @@ export function Heritage() {
           </div>
         </Reveal>
 
-        <div className="lg:col-span-6 lg:pl-8">
+        <div className="min-w-0 md:col-span-1 lg:col-span-6 lg:pl-8">
           <Reveal>
             <div className="flex items-center gap-3 mb-8">
               <span className="rule" />
@@ -24,13 +24,13 @@ export function Heritage() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-charcoal">
+            <h2 className="font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-6xl">
               A Legacy of Trust<br />
               <em className="not-italic text-champagne font-light">and Craftsmanship</em>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-10 text-charcoal/75 leading-[1.85] max-w-xl">
+            <p className="mt-6 max-w-xl leading-[1.75] text-charcoal/75 sm:mt-8 lg:mt-10">
               For four generations, the House of Shri Ram has shaped India's most
               precious moments — one ornament at a time. From a single atelier in
               the old city to a name spoken across continents, our story is woven
@@ -39,17 +39,17 @@ export function Heritage() {
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
+            <div className="mt-9 grid max-w-md grid-cols-3 gap-3 sm:mt-12 sm:gap-6">
               {[
                 { n: "72", l: "Years of Heritage" },
                 { n: "4", l: "Generations" },
                 { n: "60K+", l: "Families Served" },
               ].map((s) => (
                 <div key={s.l} className="border-t border-charcoal/15 pt-5">
-                  <div className="font-display text-3xl md:text-4xl text-champagne">
+                  <div className="font-display text-2xl text-champagne sm:text-3xl lg:text-4xl">
                     {s.n}
                   </div>
-                  <div className="mt-2 text-[10px] tracking-[0.22em] uppercase text-charcoal/60">
+                  <div className="mt-2 text-[9px] uppercase leading-relaxed tracking-[0.14em] text-charcoal/60 sm:text-[10px] sm:tracking-[0.22em]">
                     {s.l}
                   </div>
                 </div>

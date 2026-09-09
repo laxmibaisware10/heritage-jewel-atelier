@@ -11,8 +11,8 @@ const imgs = [a, b, c, d, e, f];
 
 export function Gallery() {
   return (
-    <section className="bg-ivory pb-24 md:pb-32">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
+    <section className="bg-ivory pb-16 sm:pb-24 lg:pb-32">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
         <div className="text-center mb-14">
           <Reveal>
             <div className="flex items-center justify-center gap-3 mb-6">

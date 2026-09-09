@@ -17,9 +17,9 @@ const collections = [
 
 export function Collections() {
   return (
-    <section id="collections" className="bg-beige py-24 md:py-40">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 md:mb-24 gap-8">
+    <section id="collections" className="bg-beige py-16 sm:py-24 lg:py-36">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-12">
+        <div className="mb-10 flex flex-col gap-6 sm:mb-16 md:flex-row md:items-end md:justify-between lg:mb-20">
           <Reveal>
             <div>
               <div className="flex items-center gap-3 mb-6">
@@ -39,12 +39,12 @@ export function Collections() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-6 lg:grid-cols-12 lg:gap-8">
           {collections.map((c, i) => (
             <Reveal key={c.name} delay={i * 0.05} className={c.span}>
               <a
                 href="#"
-                className="group block img-frame relative aspect-[4/5] lg:aspect-[3/4] bg-ivory"
+                className="group img-frame relative block aspect-[4/5] bg-ivory lg:aspect-[3/4]"
               >
                 <img
                   src={c.img}
@@ -53,11 +53,11 @@ export function Collections() {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 text-ivory">
+                <div className="absolute inset-x-0 bottom-0 p-6 text-ivory sm:p-7 lg:p-10">
                   <div className="text-[10px] tracking-[0.32em] uppercase text-champagne mb-3">
                     {c.desc}
                   </div>
-                  <h3 className="font-display text-2xl md:text-3xl lg:text-4xl">
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl">
                     {c.name}
                   </h3>
                   <div className="mt-5 inline-flex items-center gap-3 text-[11px] tracking-[0.28em] uppercase opacity-90">

@@ -4,16 +4,16 @@ import signature from "@/assets/signature-showcase.jpg";
 export function Signature() {
   return (
     <section className="relative bg-charcoal text-ivory overflow-hidden">
-      <div className="relative h-[85vh] min-h-[640px] w-full">
+      <div className="relative min-h-[620px] w-full sm:min-h-[680px] lg:h-[85vh]">
         <img
           src={signature}
           alt="The art of fine jewellery"
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover opacity-80"
+          className="absolute inset-0 h-full w-full object-cover object-[62%_center] opacity-80 md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-charcoal/10 md:bg-gradient-to-r md:from-charcoal/85 md:via-charcoal/30" />
 
-        <div className="relative z-10 mx-auto max-w-[1440px] h-full px-6 lg:px-12 flex items-center">
+        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1440px] items-end px-5 py-16 sm:min-h-[680px] sm:px-6 sm:py-20 md:items-center lg:h-full lg:px-12">
           <div className="max-w-xl">
             <Reveal>
               <div className="flex items-center gap-3 mb-8">
@@ -22,7 +22,7 @@ export function Signature() {
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.02]">
+              <h2 className="font-display text-4xl leading-[1.02] sm:text-5xl md:text-6xl lg:text-7xl">
                 The Art of<br />
                 <em className="not-italic text-champagne font-light">Fine Jewellery</em>
               </h2>
@@ -37,7 +37,7 @@ export function Signature() {
             <Reveal delay={0.3}>
               <a
                 href="#"
-                className="mt-12 inline-flex items-center gap-3 border border-champagne text-ivory px-8 py-4 text-[11px] tracking-[0.28em] uppercase hover:bg-champagne hover:text-charcoal transition-colors duration-500"
+                className="mt-9 inline-flex min-h-12 items-center justify-center gap-3 border border-champagne px-5 py-3 text-center text-[10px] uppercase tracking-[0.2em] text-ivory transition-colors duration-500 hover:bg-champagne hover:text-charcoal sm:mt-12 sm:px-8 sm:py-4 sm:text-[11px] sm:tracking-[0.28em]"
               >
                 View the Atelier Film
               </a>
