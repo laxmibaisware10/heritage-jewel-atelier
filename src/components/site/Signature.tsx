@@ -4,16 +4,17 @@ import signature from "@/assets/signature-showcase.jpg";
 export function Signature() {
   return (
     <section className="relative bg-charcoal text-ivory overflow-hidden">
-      <div className="relative min-h-[620px] w-full sm:min-h-[680px] lg:h-[85vh]">
+      <div className="relative aspect-video w-full md:absolute md:inset-0 md:aspect-auto">
         <img
           src={signature}
           alt="The art of fine jewellery"
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover object-[62%_center] opacity-80 md:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-charcoal/10 md:bg-gradient-to-r md:from-charcoal/85 md:via-charcoal/30" />
+      </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1440px] items-end px-5 py-16 sm:min-h-[680px] sm:px-6 sm:py-20 md:items-center lg:h-full lg:px-12">
+        <div className="relative z-10 mx-auto flex w-full max-w-[1440px] items-end px-5 py-12 sm:px-6 sm:py-16 md:min-h-[680px] md:items-center md:py-20 lg:h-[85vh] lg:px-12">
           <div className="max-w-xl">
             <Reveal>
               <div className="flex items-center gap-3 mb-8">
@@ -44,7 +45,6 @@ export function Signature() {
             </Reveal>
           </div>
         </div>
-      </div>
     </section>
   );
 }

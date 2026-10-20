@@ -15,7 +15,7 @@ export function Store() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-12 lg:grid-cols-12 lg:gap-20 lg:px-12">
         <div className="md:order-2 md:col-span-1 lg:col-span-6">
           <Reveal>
-            <div className="img-frame relative aspect-[5/4] bg-ivory">
+            <div className="img-frame relative aspect-[4/3] bg-ivory md:aspect-[5/4]">
               <img
                 src={storeImg}
                 alt="Shri Ram Jewellers flagship boutique interior"

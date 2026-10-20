@@ -6,7 +6,7 @@ export function Heritage() {
     <section id="heritage" className="bg-ivory py-16 sm:py-24 lg:py-36">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-5 sm:px-6 md:grid-cols-2 md:gap-12 lg:grid-cols-12 lg:gap-20 lg:px-12">
         <Reveal className="md:col-span-1 lg:col-span-6">
-          <div className="img-frame relative aspect-[4/5] bg-beige">
+          <div className="img-frame relative aspect-[9/16] bg-beige md:aspect-[4/5]">
             <img
               src={heritageImg}
               alt="A Shri Ram Jewellers artisan crafting a gold necklace"
