@@ -30,13 +30,15 @@ export function Gallery() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1.5 md:gap-2">
           {imgs.map((img, i) => (
-            <Reveal key={i} delay={i * 0.04}>
+            <Reveal
+              key={i}
+              delay={i * 0.04}
+              className={i === 0 ? "col-span-2 md:col-span-1" : undefined}
+            >
               <a
                 href="#"
-                className={`group relative block overflow-hidden bg-beige ${
-                  i === 0
-                    ? "col-span-2 aspect-video md:col-span-1 md:aspect-square"
-                    : "aspect-[4/5] md:aspect-square"
+                className={`group relative block aspect-square overflow-hidden bg-beige ${
+                  i === 0 ? "aspect-video md:aspect-square" : "aspect-[4/5] md:aspect-square"
                 }`}
               >
                 <img
