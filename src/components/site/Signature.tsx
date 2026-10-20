@@ -45,7 +45,6 @@ export function Signature() {
             </Reveal>
           </div>
         </div>
-      </div>
     </section>
   );
 }

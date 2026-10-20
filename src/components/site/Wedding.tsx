@@ -45,7 +45,6 @@ export function Wedding() {
             </Reveal>
           </div>
         </div>
-      </div>
     </section>
   );
 }
