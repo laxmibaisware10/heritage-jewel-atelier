@@ -3,13 +3,17 @@
 //   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, nitro (build-only using cloudflare as a default target),
 //     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
 //     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+    // Fully static output: "/" is prerendered to plain HTML at build time, so
+    // the deployed site needs no server runtime (static hosting, e.g. Netlify).
+    pages: [{ path: "/" }],
+    prerender: { enabled: true },
   },
+  // Self-hosting deploy target. Inside Lovable's own build the Cloudflare
+  // preset is pinned and this override is ignored; builds elsewhere (e.g.
+  // Netlify CI) produce a plain static site in dist/.
+  nitro: { preset: "netlify-static" },
 });
