@@ -3,11 +3,11 @@ import heroImg from "@/assets/hero-bride.jpg";
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-charcoal pt-20 sm:pt-24 md:h-[100svh] md:min-h-[700px] md:pt-0 lg:min-h-[720px]">
+    <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-charcoal sm:min-h-[640px] md:h-[100svh] md:min-h-[700px] lg:min-h-[720px]">
       <motion.img
         src={heroImg}
         alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
-        className="relative z-0 block aspect-video w-full object-contain object-center md:absolute md:inset-0 md:h-[110%] md:aspect-auto md:object-cover md:object-[72%_center] lg:object-right"
+        className="absolute inset-0 z-0 block h-full w-full object-cover object-[68%_center] lg:object-right"
         initial={{ scale: 1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
@@ -18,7 +18,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent md:bg-gradient-to-r md:from-charcoal/80 md:via-charcoal/30" />
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-charcoal/70 to-transparent" />
 
-      <div className="relative z-10 mx-auto flex min-h-[300px] max-w-[1440px] flex-col justify-end px-5 pb-10 pt-8 sm:px-6 sm:pb-16 md:h-full md:min-h-0 md:pt-24 md:pb-24 lg:px-12 lg:pb-28">
+      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-12 pt-28 sm:px-6 sm:pb-16 md:pb-24 lg:px-12 lg:pb-28">
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
