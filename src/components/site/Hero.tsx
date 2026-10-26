@@ -3,23 +3,27 @@ import heroImg from "@/assets/hero-bride.jpg";
 
 export function Hero() {
   return (
-    <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-charcoal sm:min-h-[640px] md:h-[100svh] md:min-h-[700px] lg:min-h-[720px]">
-      <motion.img
-        src={heroImg}
-        alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
-        className="absolute inset-0 z-0 block h-full w-full object-cover object-right"
-        initial={{ scale: 1, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
-      />
-      {/* Top scrim for header legibility */}
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/70 to-transparent sm:h-48" />
-      {/* Left scrim for headline legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent md:bg-gradient-to-r md:from-charcoal/80 md:via-charcoal/30" />
-      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-charcoal/70 to-transparent" />
+    <section className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-charcoal md:block md:h-[100svh] md:min-h-[700px] lg:min-h-[720px]">
+      {/* Image block: poster-style on mobile, full-bleed backdrop on desktop */}
+      <div className="relative h-[54svh] min-h-[300px] w-full md:absolute md:inset-0 md:h-full md:min-h-0">
+        <motion.img
+          src={heroImg}
+          alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
+          className="absolute inset-0 z-0 block h-full w-full object-cover object-right"
+          initial={{ scale: 1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
+        />
+        {/* Top scrim for header legibility */}
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/70 to-transparent sm:h-48" />
+        {/* Mobile-only fade into the dark text panel below */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-charcoal to-transparent md:hidden" />
+        {/* Desktop left scrim for headline legibility */}
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-charcoal/80 via-charcoal/30 to-transparent md:block" />
+      </div>
 
-      <div className="relative z-10 mx-auto flex h-full max-w-[1440px] flex-col justify-end px-5 pb-12 pt-28 sm:px-6 sm:pb-16 md:pb-24 lg:px-12 lg:pb-28">
-
+      {/* Text block: solid dark panel on mobile, overlay on desktop */}
+      <div className="relative z-10 flex flex-1 flex-col justify-center bg-charcoal px-5 pb-12 pt-8 sm:px-6 md:absolute md:inset-x-0 md:bottom-0 md:top-0 md:mx-auto md:max-w-[1440px] md:justify-end md:bg-transparent md:px-12 md:pb-24 md:pt-28 lg:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
