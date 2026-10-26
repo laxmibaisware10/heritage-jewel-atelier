@@ -1,13 +1,24 @@
 import { motion } from "motion/react";
 import heroImg from "@/assets/hero-bride.jpg";
+import heroImgMobile from "@/assets/hero-bride-mobile.jpg";
 
 export function Hero() {
   return (
     <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden bg-charcoal sm:min-h-[640px] md:h-[100svh] md:min-h-[700px] lg:min-h-[720px]">
+      {/* Mobile: dedicated portrait crop so the bride is never cut off */}
+      <motion.img
+        src={heroImgMobile}
+        alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
+        className="absolute inset-0 z-0 block h-full w-full object-cover object-center lg:hidden"
+        initial={{ scale: 1, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
+      />
+      {/* Laptop/desktop: original landscape composition */}
       <motion.img
         src={heroImg}
         alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
-        className="absolute inset-0 z-0 block h-full w-full object-cover object-[68%_center] lg:object-right"
+        className="absolute inset-0 z-0 hidden h-full w-full object-cover object-right lg:block"
         initial={{ scale: 1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
