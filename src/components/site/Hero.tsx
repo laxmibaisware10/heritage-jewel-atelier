@@ -7,7 +7,7 @@ export function Hero() {
       <motion.img
         src={heroImg}
         alt="Indian bride wearing exquisite Shri Ram Jewellers bridal jewellery"
-        className="absolute inset-0 z-0 block h-full w-full object-cover object-[68%_center] lg:object-right"
+        className="absolute inset-0 z-0 block h-full w-full object-cover object-right"
         initial={{ scale: 1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
